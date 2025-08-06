@@ -1,16 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fitness Tracker</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>My Fitness Tracker</h1>
-  <p id="status">No progress yet!</p>
-  <button onclick="updateProgress()">Track Workout</button>
 
-  <script src="script.js"></script>
+    <header class="navbar">
+        <div class="logo">
+            <svg width="40" height="40" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24 4L12 12V24H24V4ZM24 24H36V12L24 4V24ZM12 24V36L4 24H12ZM36 24V36L24 44L36 36V24Z" fill="white"/>
+            </svg>
+        </div>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+        </nav>
+        <button class="login-btn">Login/Sign Up</button>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Achieve Your Fitness Goals</h1>
+                <p>Personalized workouts, progress tracking, and expert guidance at your fingertips.</p>
+                <div class="hero-buttons">
+                    <button class="cta-btn primary-btn" id="start-trial-btn">Start Free Trial</button>
+                    <button class="cta-btn secondary-btn" id="learn-more-btn">Learn More</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z" fill="currentColor"/>
+                        <path d="M12 11.5L9.5 9L11.5 6.5L14 9L12 11.5ZM12 14.5L9.5 12L11.5 9.5L14 12L12 14.5ZM12 17.5L9.5 15L11.5 12.5L14 15L12 17.5Z" fill="currentColor"/>
+                    </svg>
+                </div>
+                <p>Custom Workout Plans</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z" fill="currentColor"/>
+                        <path d="M12 12C14.76 12 17 9.76 17 7C17 4.24 14.76 2 12 2C9.24 2 7 4.24 7 7C7 9.76 9.24 12 12 12Z" fill="currentColor"/>
+                        <path d="M12 14C9.33 14 6.69 14.62 4.41 15.65C4.16 15.77 4 16.03 4 16.32V18.5C4 18.78 4.22 19 4.5 19H19.5C19.78 19 20 18.78 20 18.5V16.32C20 16.03 19.84 15.77 19.59 15.65C17.31 14.62 14.67 14 12 14Z" fill="currentColor"/>
+                    </svg>
+                </div>
+                <p>Progress Tracking</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z" fill="currentColor"/>
+                        <path d="M12 8C10.9 8 10 8.9 10 10V14C10 15.1 10.9 16 12 16C13.1 16 14 15.1 14 14V10C14 8.9 13.1 8 12 8ZM12 6C12.55 6 13 5.55 13 5V4C13 3.45 12.55 3 12 3C11.45 3 11 3.45 11 4V5C11 5.55 11.45 6 12 6ZM12 18C12.55 18 13 18.45 13 19V20C13 20.55 12.55 21 12 21C11.45 21 11 20.55 11 20V19C11 18.45 11.45 18 12 18ZM18 12C18 12.55 18.45 13 19 13H20C20.55 13 21 12.55 21 12C21 11.45 20.55 11 20 11H19C18.45 11 18 11.45 18 12ZM4 12C4 12.55 4.45 13 5 13H6C6.55 13 7 12.55 7 12C7 11.45 6.55 11 6 11H5C4.45 11 4 11.45 4 12Z" fill="currentColor"/>
+                    </svg>
+                </div>
+                <p>Nutrition Guidance</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z" fill="currentColor"/>
+                        <path d="M12 12C14.76 12 17 9.76 17 7C17 4.24 14.76 2 12 2C9.24 2 7 4.24 7 7C7 9.76 9.24 12 12 12Z" fill="currentColor"/>
+                        <path d="M12 14C9.33 14 6.69 14.62 4.41 15.65C4.16 15.77 4 16.03 4 16.32V18.5C4 18.78 4.22 19 4.5 19H19.5C19.78 19 20 18.78 20 18.5V16.32C20 16.03 19.84 15.77 19.59 15.65C17.31 14.62 14.67 14 12 14Z" fill="currentColor"/>
+                    </svg>
+                </div>
+                <p>Community Support</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
